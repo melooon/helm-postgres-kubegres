@@ -1,0 +1,21 @@
+apiVersion: kubegres.reactive-tech.io/v1
+kind: Kubegres
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
+spec:
+   replicas: {{ .Values.replicas }}
+   image: postgres:14.1
+   database:
+      size: {{ .Values.size }}
+   env:
+      - name: POSTGRES_PASSWORD
+        valueFrom:
+           secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: superUserPassword
+      - name: POSTGRES_REPLICATION_PASSWORD
+        valueFrom:
+           secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: replicationUserPassword

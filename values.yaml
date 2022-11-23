@@ -1,0 +1,5 @@
+namespace: postgres
+replicas: 1
+size: 100Mi
+superUserPassword: demo@123
+replicationUserPassword: demo@123
