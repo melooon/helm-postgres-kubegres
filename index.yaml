@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  postgres-with-operator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-23T22:24:21.115157066+04:00"
+    description: A Helm chart for Kubernetes
+    digest: 47017cd40be4dae637eab83964fc05310cf06e30c4f87441b3142406ddd5ffac
+    name: postgres-with-operator
+    type: application
+    urls:
+    - postgres-with-operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-11-23T22:24:21.114327521+04:00"
